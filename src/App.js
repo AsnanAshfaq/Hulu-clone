@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import "./App.css";
 import request from "./request";
 import Axios from "./axios";
+// custom components 🤓
 import MovieCard from "./MovieCard";
 import Error from "./error";
 import Header from "./header";
@@ -46,15 +47,9 @@ function App() {
     <div className="app">
       <Header />
       <Nav setOptions={setNavCategory} />
-      {/* <ReactLoading
-            type={"bubbles"}
-            color={"white"}
-            delay={500}
-            height={"10%"}
-            width={"10%"}
-          /> */}
+
       {isLoading ? (
-        <div style={{position:'absolute',top:0}}>
+        <div style={{ position: "absolute", top: 0 }}>
           <ReactLoading
             type={"bubbles"}
             color={"black"}
